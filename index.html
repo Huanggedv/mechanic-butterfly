@@ -971,7 +971,12 @@ function drawCam() {
   // 黑白胶片感：灰度 + 适中的对比度，再叠一层跳动的颗粒
   const cg = camG.drawingContext;
   cg.filter = 'grayscale(1) brightness(' + CAM_BRIGHT + ') contrast(' + CAM_CONTRAST + ')';
-  camG.image(video, 0, 0, w, h);
+  const vel = video && video.elt;
+  if (vel && vel.readyState >= 2 && vel.videoWidth > 0) {
+    camG.image(video, 0, 0, w, h);
+  } else {
+    camG.background(0);                       // 摄像头还没画面（或被拒绝）：先显示黑底，别让整个画面出错
+  }
   cg.filter = 'none';
   if (GRAIN > 0 && grainTiles.length) {
     cg.save();
