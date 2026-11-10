@@ -1,0 +1,53 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#111"/></marker>
+<marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#999"/></marker></defs><style>.t{font-family:Helvetica,Arial,sans-serif;font-size:22px;font-weight:700;fill:#111}.s{font-family:Helvetica,Arial,sans-serif;font-size:16px;fill:#555}.m{font-family:Menlo,Consolas,monospace;font-size:15px;fill:#111}.lab{font-family:Menlo,Consolas,monospace;font-size:14px;fill:#555}text{font-family:Helvetica,Arial,sans-serif}</style><rect width="1600" height="900" fill="#fff"/>
+<text x="60" y="62" style="font-size:30px;font-weight:700">ACTIAS_01 — System Diagram</text>
+<text x="60" y="94" class="s">Input → Process → Output, with the person closing the loop</text>
+<!-- column labels -->
+<text x="60" y="150" class="lab">INPUT</text><text x="430" y="150" class="lab">PROCESS (LAPTOP · p5.js)</text><text x="1060" y="150" class="lab">OUTPUT</text>
+<line x1="60" y1="160" x2="1540" y2="160" stroke="#ddd"/>
+<!-- input -->
+<rect x="60" y="230" width="280" height="110" rx="10" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="80" y="275" class="t">Person's hand</text><text x="80" y="305" class="s">moves in front of the laptop</text>
+<rect x="60" y="430" width="280" height="110" rx="10" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="80" y="475" class="t">Webcam</text><text x="80" y="505" class="s">built-in camera, video frames</text>
+<line x1="200" y1="340" x2="200" y2="426" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<!-- process -->
+<rect x="420" y="190" width="560" height="520" rx="14" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<rect x="450" y="230" width="500" height="100" rx="10" fill="#fff" stroke="#111" stroke-width="1.5"/>
+<text x="470" y="272" class="t">ml5 HandPose</text><text x="470" y="302" class="s">21 keypoints → palm position (x, y), speed</text>
+<rect x="450" y="370" width="500" height="170" rx="10" fill="#111"/>
+<text x="470" y="410" class="t" style="fill:#fff">State machine</text>
+<text x="470" y="448" class="m" style="fill:#fff">REST   no hand              → 'R'</text>
+<text x="470" y="476" class="m" style="fill:#fff">FLY    hand detected        → 'G' / 'S'</text>
+<text x="470" y="504" class="m" style="fill:#fff">RETURN hand lost &gt; 0.4 s    → 'G' → 'R'</text>
+<rect x="450" y="580" width="235" height="100" rx="10" fill="#fff" stroke="#111" stroke-width="1.5"/>
+<text x="468" y="622" class="t">Visual + sound</text><text x="468" y="652" class="s">1-bit flower, butterfly</text>
+<rect x="715" y="580" width="235" height="100" rx="10" fill="#fff" stroke="#111" stroke-width="1.5"/>
+<text x="733" y="622" class="t">Web Serial</text><text x="733" y="652" class="s">115200 baud, on change</text>
+<line x1="700" y1="330" x2="700" y2="366" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<line x1="567" y1="540" x2="567" y2="576" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<line x1="832" y1="540" x2="832" y2="576" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<path d="M340 485 L390 485 L390 280 L446 280" fill="none" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<text x="346" y="508" class="lab">video</text>
+<!-- outputs -->
+<rect x="1060" y="190" width="480" height="140" rx="10" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="1080" y="235" class="t">Laptop screen + speakers</text><text x="1080" y="265" class="s">on-screen butterfly follows the hand;</text><text x="1080" y="290" class="s">glitch, data labels, drone + hand-height tone</text>
+<path d="M567 680 L567 740 L1010 740 L1010 260 L1056 260" fill="none" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<!-- hidden in base -->
+<rect x="1060" y="380" width="480" height="330" rx="14" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1080" y="410" class="lab">HIDDEN INSIDE THE FLOWER BASE</text>
+<rect x="1085" y="430" width="200" height="90" rx="10" fill="#fff" stroke="#111" stroke-width="1.5"/><text x="1103" y="470" class="t">Arduino Uno</text><text x="1103" y="498" class="s">reads R / G / S</text>
+<rect x="1315" y="430" width="200" height="90" rx="10" fill="#fff" stroke="#111" stroke-width="1.5"/><text x="1333" y="470" class="t">MG90S servo</text><text x="1333" y="498" class="s">D9 · swings 60°–120°</text>
+<line x1="1285" y1="475" x2="1311" y2="475" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<rect x="1315" y="580" width="200" height="100" rx="10" fill="#fff" stroke="#111" stroke-width="1.5"/><text x="1333" y="618" class="t">Horn + 2 rods</text><text x="1333" y="646" class="s">push / pull through</text><text x="1333" y="668" class="s">the flower centre</text>
+<line x1="1415" y1="520" x2="1415" y2="576" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<path d="M832 680 L832 780 L1040 780 L1040 475 L1081 475" fill="none" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<text x="860" y="770" class="lab">USB: 'R' 'G' 'S'</text>
+<rect x="1060" y="760" width="480" height="90" rx="10" fill="#111"/>
+<text x="1080" y="800" class="t" style="fill:#fff">Physical butterfly flaps</text><text x="1080" y="828" class="s" style="fill:#ccc">still in REST · flaps in FLY · settles after RETURN</text>
+<path d="M1515 630 L1560 630 L1560 805 L1544 805" fill="none" stroke="#111" stroke-width="2" marker-end="url(#a)"/>
+<!-- feedback -->
+<path d="M1060 840 L36 840 L36 285 L56 285" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#g)"/>
+<text x="60" y="830" class="lab" style="fill:#888">feedback: the person sees the butterflies react and keeps moving the hand</text>
+</svg>
