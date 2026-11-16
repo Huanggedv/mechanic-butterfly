@@ -38,6 +38,7 @@ arduino/
   butterfly_servo/        main sketch (180° MG90S)
   butterfly_servo_360/    fallback for a 360° continuous servo
 models/
+  final_print/ACTIAS_01_final_print_H2D.3mf   ★ final Bambu Studio print (one-piece flower + all parts)
   blender/flower.blend    flower model (source of the point cloud)
   stl/01_small_fit        hinge ears, body, collar, fit coupon, servo cradle, horn adapter, eye sleeve
   stl/02_single_petal_trials
