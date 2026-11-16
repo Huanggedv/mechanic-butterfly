@@ -55,6 +55,7 @@ tools/
   golden_hour_grade.py      video post-processing used for the golden-hour film
 docs/
   design_journal.md, system diagram, photos, screen previews, films
+  photos/                 all 78 original photos from the final shoot (Nov 11)
 ```
 
 
