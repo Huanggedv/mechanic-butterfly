@@ -52,6 +52,11 @@ docs/
   design_journal.md, system diagram, photos, screen previews, films
 ```
 
+
+### Final print file
+
+`models/final_print/ACTIAS_01_final_print_H2D.3mf` — the Bambu Studio project used for the final piece (one-piece flower, both wings, base, servo cradle and all mechanism parts). See `models/final_print/README.md` for the part list.
+
 ## Run it
 
 1. **Arduino** — open `arduino/butterfly_servo/butterfly_servo.ino` in Arduino IDE, select Arduino Uno + port, upload. **Close the Serial Monitor** afterwards (it blocks the port).
