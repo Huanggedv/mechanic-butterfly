@@ -4,6 +4,10 @@
 
 A black mechanical butterfly rests on an abstract 3D-printed flower. When the laptop webcam sees a hand, the real butterfly starts to flap (Arduino + MG90S servo hidden in the flower base), and its digital twin on screen flies to follow the hand.
 
+**▶ Demo video (YouTube):** https://www.youtube.com/watch?v=v5unXjpec1M
+
+[![ACTIAS_01 demo video](https://img.youtube.com/vi/v5unXjpec1M/maxresdefault.jpg)](https://www.youtube.com/watch?v=v5unXjpec1M)
+
 **▶ Live visual:** https://huanggedv.github.io/mechanic-butterfly/ — open in **Chrome** (Safari has no Web Serial).
 
 ![System diagram](docs/ACTIAS_01_system_diagram.png)
